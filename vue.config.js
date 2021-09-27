@@ -1,3 +1,8 @@
+const path = require('path');
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
 module.exports = {
     pages: {
       index: {
@@ -16,5 +21,15 @@ module.exports = {
       },
     
     },
-    lintOnSave:true
+    lintOnSave:true,
+    configureWebpack() {
+      return {
+        resolve: {
+          alias: {
+            '@': resolve('src')
+          }
+        }
+      }
+    }
+
   }

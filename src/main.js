@@ -10,6 +10,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './permission'
 //按需引入
 // import { Button,Row,DatePicker } from 'element-ui';
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
